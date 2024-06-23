@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: brown;
+    color: rgb(233, 172, 93);
+    padding: 16px 8px;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav li{
+    display: inline;
+    padding: 8px;
+}
+
+header nav li a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+body{
+    display: block;
+    width: 1200px;
+    
+}
+
+.container a:hover{
+    font-weight: bold;
+}
+
+input{
+    padding: 2px;
+}
+
+button{
+    padding: 2px;
+    background-color: rgb(233, 172, 93);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.carrosel-imagens{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+span{
+    display: block;
+    margin-left: 20px;
+    max-width: 100%;
+    border: 1px solid brown;
+}
+
+.titulo{
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+.texto-historia p{
+    padding: 10px 8px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+img{
+    border-radius: 4px;
+}
+
+.carrosel-imagens img{
+    border-radius: unset;
+}
+
+.sobre img{
+    max-width: 100%;
+    margin-left: 10px;
+}
+
+.sobre{
+    display: grid;
+    grid-template-columns: 27% 70%;
+    column-gap: 2%;
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 340px;
+    width: 1200px;
+}
+
+.prato img{
+    max-width: 100%;
+}
+
+.prato > img{
+    margin-left: 12px;
+}
+
+.botao-prato:hover{
+    border: 1px solid brown;
+    cursor: pointer;
+}
+.prato img:hover{
+    border: 1px solid brown;
+}
+
+.pratos{
+    display: grid;
+    grid-template-columns: repeat(4, 23.45%);
+    column-gap: 2%;
+    row-gap: 5%;
+    padding: 10px;
+    width: 1200px;
+    margin-top: 12px;
+}
+
+.prato h2, p, button{
+    margin: 2px 20px;
+}
+
+@media screen and (max-width: 767px){
+    body{
+        display: block;
+        width: 767px;
+    }
+
+    header{
+        width: 767px;
+    }
+    
+    .conteudo{
+        display: block;
+    }
+
+    .container{
+        max-width: 90%;
+    }
+
+    .sobre{
+        display: block;
+    }
+
+    .historia{
+        display: block;
+        width: 767px;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .carrosel-imagens{
+        display: block;
+    }
+
+    .carrosel-imagens img{
+        max-width: 100%;
+    }
+
+    .historia{
+        display: block;
+    }
+
+    .pratos{
+        display: block;
+    }
+}
