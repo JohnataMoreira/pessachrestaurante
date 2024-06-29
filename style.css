@@ -7,13 +7,18 @@
 header{
     background-color: brown;
     color: rgb(233, 172, 93);
-    padding: 16px 8px;
+    padding:  10px;
+    margin-bottom: 8px;
 }
 
-header .container{
+header .cabecalho{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.cabecalho h1{
+    margin-left: 6px;
 }
 
 header nav li{
@@ -27,18 +32,34 @@ header nav li a{
     text-transform: uppercase;
 }
 
-body{
+.sobre{
+    display: grid;
+    grid-template-columns: 340px auto;
+    padding: 10px;
+    margin-left: 6px;
+}
+
+#detalhe{
     display: block;
-    width: 1200px;
-    
+    border: 2px solid brown;
+    border-radius: 2px;
+    margin-left: 1%;
+    margin-right: 1%;
+    max-width: 98%;
 }
 
-.container a:hover{
-    font-weight: bold;
+.nossos-pratos #detalhe{
+    margin-left: 1%;
 }
 
-input{
-    padding: 2px;
+.pratos{
+    display: grid;
+    grid-template-columns: repeat(4, 23.45%);
+    column-gap: 2%;
+    row-gap: 5%;
+    padding: 10px;
+    max-width: 100%;
+    margin-top: 12px;
 }
 
 button{
@@ -46,34 +67,6 @@ button{
     background-color: rgb(233, 172, 93);
     font-weight: 700;
     font-size: 12px;
-}
-
-.carrosel-imagens{
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-
-span{
-    display: block;
-    margin-left: 20px;
-    max-width: 100%;
-    border: 1px solid brown;
-}
-
-.titulo{
-    margin-left: 20px;
-    text-transform: uppercase;
-}
-
-.texto-historia p{
-    padding: 10px 8px;
-}
-
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 10px;
 }
 
 img{
@@ -84,27 +77,33 @@ img{
     border-radius: unset;
 }
 
-.sobre img{
-    max-width: 100%;
-    margin-left: 10px;
+.zoom{
+    transition: .2s;
 }
 
-.sobre{
-    display: grid;
-    grid-template-columns: 27% 70%;
-    column-gap: 2%;
-    margin-top: 20px;
-    margin-left: 10px;
-    height: 340px;
-    width: 1200px;
+.zoom:hover{
+    transform: scale(1.03);
 }
 
+#titulo{
+    margin-left: 20px;
+}
+
+#texto{
+    padding: 10px;
+}
 .prato img{
     max-width: 100%;
+    height: 320px;
+    border-radius: 5px;
 }
 
 .prato > img{
-    margin-left: 12px;
+    margin-left: 2px;
+}
+
+.cabecalho a:hover{
+    font-weight: bold;
 }
 
 .botao-prato:hover{
@@ -113,6 +112,8 @@ img{
 }
 .prato img:hover{
     border: 1px solid brown;
+    transition: .2s;
+    transform: scale(1.02);
 }
 
 .pratos{
@@ -121,7 +122,7 @@ img{
     column-gap: 2%;
     row-gap: 5%;
     padding: 10px;
-    width: 1200px;
+    max-width: 100%;
     margin-top: 12px;
 }
 
@@ -129,50 +130,83 @@ img{
     margin: 2px 20px;
 }
 
-@media screen and (max-width: 767px){
-    body{
-        display: block;
-        width: 767px;
+@media(max-width: 767px){
+    .menu, form{
+        display: none;
     }
-
-    header{
-        width: 767px;
-    }
-    
-    .conteudo{
-        display: block;
-    }
-
-    .container{
-        max-width: 90%;
-    }
-
     .sobre{
-        display: block;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
-    .historia{
-        display: block;
-        width: 767px;
+    .img-sobre{
+        max-width: 100%;
+        margin-left: 30%;
+        margin-top: 20px; 
     }
 
-    .menu{
+    .item-sobre{
+        max-width: 100%;
+        display: block;
+        margin-left: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #texto{
+        display: block;
+        width: 100%;
+        margin-left: 4px;
+        font-size: 22px;
+    }
+
+    #detalhe{
         display: none;
     }
 
-    .carrosel-imagens{
-        display: block;
-    }
-
-    .carrosel-imagens img{
-        max-width: 100%;
-    }
-
-    .historia{
-        display: block;
+    #titulo{
+        font-size: 48px;
     }
 
     .pratos{
         display: block;
+        text-align: center;
+    }
+
+    .prato{
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    .nossos-pratos #titulo{
+        text-align: center;
+        padding: 10px;
+    }
+
+    #info-prato{
+        font-size: 1.5rem;
+    }
+
+    #info-prato{
+        margin: 2% 15%;
+    }
+
+    .botao-prato{
+        height: 45px;
+        width: 150px;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+    }
+
+    .botao-prato:hover{
+        border: 2px solid brown;
+        cursor: pointer;
+    }
+    
+    .prato img:hover{
+        border: 2px solid brown;
+        transition: .2s;
+        transform: scale(1.02);
     }
 }
