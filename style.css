@@ -86,24 +86,36 @@ img{
 }
 
 #titulo{
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 #texto{
     padding: 10px;
 }
+
 .prato img{
-    max-width: 100%;
+    max-width: 98%;
     height: 320px;
     border-radius: 5px;
+    column-gap: 2%;
 }
 
 .prato > img{
-    margin-left: 2px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cabecalho a:hover{
     font-weight: bold;
+}
+
+.botao-prato{
+    height: 46px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 .botao-prato:hover{
@@ -130,10 +142,11 @@ img{
     margin: 2px 20px;
 }
 
-@media(max-width: 767px){
+@media(max-width: 640px){
     .menu, form{
         display: none;
     }
+
     .sobre{
         max-width: 100%;
         display: flex;
@@ -142,14 +155,13 @@ img{
 
     .img-sobre{
         max-width: 100%;
-        margin-left: 30%;
-        margin-top: 20px; 
+        text-align: center;
     }
 
     .item-sobre{
         max-width: 100%;
         display: block;
-        margin-left: 20px;
+        margin-left: auto;
         text-align: center;
         margin-top: 10px;
     }
@@ -159,10 +171,6 @@ img{
         width: 100%;
         margin-left: 4px;
         font-size: 22px;
-    }
-
-    #detalhe{
-        display: none;
     }
 
     #titulo{
@@ -208,5 +216,54 @@ img{
         border: 2px solid brown;
         transition: .2s;
         transform: scale(1.02);
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px){
+    .sobre{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-sobre{
+        max-width: 100%;
+        margin-left: 30%;
+        margin-top: 20px; 
+    }
+
+    .item-sobre{
+        max-width: 100%;
+        display: block;
+        margin-left: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #texto{
+        display: block;
+        width: 100%;
+        margin-left: 4px;
+        font-size: 22px;
+    }
+
+    #titulo{
+        font-size: 48px;
+    }
+
+    .pratos{
+        display: grid;
+        grid-template-columns: repeat(2, 47%);
+        column-gap: 2%;
+        row-gap: 5%;
+        padding: 0px;
+        max-width: 100%;
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    .botao-prato-impar{
+        max-width: 100%;
+        margin-left: 7px;
     }
 }
